@@ -4,8 +4,8 @@ module labour::Syntax
  * Define a concrete syntax for LaBouR. The langauge's specification is available in the PDF (Section 2)
  */
 
-start syntax Route = route: "bouldering_route" "{" RDesc+ rdesc Hold+ holds "}";
-syntax Hold = hold: "hold" "{" HDesc+ hdesc "}"
+start syntax Route = route: "bouldering_route" "{" RDesc+ rdesc Hold holds "}";
+syntax Hold = hold: "hold" "{" HDesc hdesc "}"
 				  > left Hold "," Hold;
 
 // Route description
